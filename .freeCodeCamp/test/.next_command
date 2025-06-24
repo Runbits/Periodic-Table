@@ -307,3 +307,7 @@ git pull --help
 git pull origin main --all
 git pull origin main
 git add .
+git commit -m "3er Update BD"
+git pull origin main
+mv periodic_table.sql periodic_table2.sql
+git add .
