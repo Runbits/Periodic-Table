@@ -292,3 +292,18 @@ git push -u origin main
 git pull origin main
 git push -u origin main
 git add .
+git status
+git pull origin main
+git commit -m "3rd try BD update"
+git add .
+git pull origin main
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+git pull origin main
+git pull origin main -f
+git pull origin main --force
+git --help
+git pull --help
+git pull origin main --all
+git pull origin main
+git add .
