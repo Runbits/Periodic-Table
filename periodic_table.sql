@@ -2,31 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.5 (Debian 12.5-1.pgdg90+1)
--- Dumped by pg_dump version 12.5 (Debian 12.5-1.pgdg90+1)
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
-DROP DATABASE IF EXISTS periodic_table;
---
--- Name: periodic_table; Type: DATABASE; Schema: -; Owner: postgres
---
-
-CREATE DATABASE periodic_table WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'C.UTF-8' LC_CTYPE = 'C.UTF-8';
-
-
-ALTER DATABASE periodic_table OWNER TO postgres;
-
-\connect periodic_table
+-- Dumped from database version 12.17 (Ubuntu 12.17-1.pgdg22.04+1)
+-- Dumped by pg_dump version 12.17 (Ubuntu 12.17-1.pgdg22.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -75,30 +52,34 @@ ALTER TABLE public.properties OWNER TO freecodecamp;
 -- Data for Name: elements; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.elements VALUES (1, 'H', 'Hydrogen');
-INSERT INTO public.elements VALUES (2, 'he', 'Helium');
-INSERT INTO public.elements VALUES (3, 'li', 'Lithium');
-INSERT INTO public.elements VALUES (4, 'Be', 'Beryllium');
-INSERT INTO public.elements VALUES (5, 'B', 'Boron');
-INSERT INTO public.elements VALUES (6, 'C', 'Carbon');
-INSERT INTO public.elements VALUES (7, 'N', 'Nitrogen');
-INSERT INTO public.elements VALUES (8, 'O', 'Oxygen');
-INSERT INTO public.elements VALUES (1000, 'mT', 'moTanium');
+COPY public.elements (atomic_number, symbol, name) FROM stdin;
+1	H	Hydrogen
+2	he	Helium
+3	li	Lithium
+4	Be	Beryllium
+5	B	Boron
+6	C	Carbon
+7	N	Nitrogen
+8	O	Oxygen
+1000	mT	moTanium
+\.
 
 
 --
 -- Data for Name: properties; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.properties VALUES (1, 'nonmetal', 1.008000, -259.1, -252.9);
-INSERT INTO public.properties VALUES (2, 'nonmetal', 4.002600, -272.2, -269);
-INSERT INTO public.properties VALUES (3, 'metal', 6.940000, 180.54, 1342);
-INSERT INTO public.properties VALUES (4, 'metal', 9.012200, 1287, 2470);
-INSERT INTO public.properties VALUES (5, 'metalloid', 10.810000, 2075, 4000);
-INSERT INTO public.properties VALUES (6, 'nonmetal', 12.011000, 3550, 4027);
-INSERT INTO public.properties VALUES (7, 'nonmetal', 14.007000, -210.1, -195.8);
-INSERT INTO public.properties VALUES (8, 'nonmetal', 15.999000, -218, -183);
-INSERT INTO public.properties VALUES (1000, 'metalloid', 1, 10, 100);
+COPY public.properties (atomic_number, type, weight, melting_point, boiling_point) FROM stdin;
+1	nonmetal	1.008000	-259.1	-252.9
+2	nonmetal	4.002600	-272.2	-269
+3	metal	6.940000	180.54	1342
+4	metal	9.012200	1287	2470
+5	metalloid	10.810000	2075	4000
+6	nonmetal	12.011000	3550	4027
+7	nonmetal	14.007000	-210.1	-195.8
+8	nonmetal	15.999000	-218	-183
+1000	metalloid	1.000000	10	100
+\.
 
 
 --
@@ -136,3 +117,4 @@ ALTER TABLE ONLY public.properties
 --
 -- PostgreSQL database dump complete
 --
+
