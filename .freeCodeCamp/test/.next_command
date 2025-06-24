@@ -180,3 +180,27 @@ vi ramv@192.1683
 mv ramv@192.1683 dumpBD
 ls --color=auto -alh
 git add .
+git status
+git commit -m "copy BD to srv-ramv"
+git status
+git add .
+git status
+git branch
+git push main --force
+git remote -v
+git remote remove origin
+git remote -v
+git remote remove origin
+git remote -v
+clear
+git remote add origin https://github.com/Runbits/Periodic-Table.git
+git remote -v
+git remote set-url origin https://github.com/Runbits/Periodic-Table.git
+git config --global 50782028+Runbits@users.noreply.github.com
+git config --global user.mail
+git config --global user.mail
+git config --global user.mail
+git config user.mail "50782028+Runbits@users.noreply.github.com"
+git statis
+git status
+git add .
