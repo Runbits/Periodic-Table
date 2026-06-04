@@ -6,7 +6,7 @@ PSQL="psql --username=postgres --dbname=periodic_table -t --no-align -c"
 # If no argument is provided, display message and terminate
 if [[ -z $1 ]]
 then
-  echo "Please provide an element as an argument. and finish running"
+  echo "Please provide an element as an argument."
   exit
 fi
 
@@ -27,7 +27,11 @@ else
   echo "$ELEMENT_DATA" | while IFS="|" read ATOMIC_NUMBER NAME SYMBOL TYPE MASS MELTING BOILING
   do
     # Show the final message formatted with the corresponding variables
-    echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $MASS uma. $NAME has a melting point of $MELTING °C and a boiling point of $BOILING °C."
+    echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $MASS amu. $NAME has a melting point of $MELTING celsius and a boiling point of $BOILING celsius."
   done
 fi
-# Commit de actualizacion forzada para el validador
+# Commit de actualizacion forzada para el validador# sync1
+# sync2
+# sync3
+# sync4
+
